@@ -27,9 +27,9 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
     // req.body will hold the text fields, if there were any
 })
 
-//POST Users...
+//POST(Login) Users...
 app.post('/users', (req, res) => {
-    var body = _.pick(req.body, ['email', 'password', 'phoneno', 'address']);
+    var body = _.pick(req.body, ['name', 'email', 'password', 'phoneNo', 'address']);
     var user = new User(body);
 
     user.save().then((user) => {

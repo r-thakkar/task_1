@@ -6,6 +6,9 @@ const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 
 var UserSchema = new mongoose.Schema({
+    name: {
+        type: String
+    },
     phoneNo: {
         type: Number,
         maxlength: 14
